@@ -1,0 +1,55 @@
+body{
+    margin: 0;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 500px;
+    border: solid 5px aqua;
+    margin: 0;
+    flex-wrap: wrap;
+    font-family: 'Whitelist';
+}
+.box{
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    width: 50px;
+    height: 50px;
+    border: solid 1px palevioletred;
+    background-color: palevioletred;
+    min-height: 50px;
+    max-height: 70px;
+}
+#box-1{
+    order: 2;
+    background-color: blueviolet;
+}
+#box-2{
+    order: 3;
+    background-color: palegreen;
+    /* align-self: baseline; */
+}
+@media (max-width: 320px){     /*significa "se é menor ou igual, faça"*/
+    #box-1{
+        background-color: peachpuff;
+    }
+}
+@media (orientation: landscape){
+    #box-2{
+        background-color: papayawhip;
+    }
+}
+@media (min-width: 450px){     /*significa "se é maior ou igual, faça"*/
+    #box-2{
+        border: solid 1px black;
+    }
+}
+@font-face{
+    font-family: 'Whitelist';
+    src: url(Whitelist.otf);
+}
+.text{
+    order: 4;
+}
